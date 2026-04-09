@@ -433,7 +433,7 @@ export default function HomePage() {
         <header className="hero panel-surface">
           <div className="hero-copy-wrap">
             <p className="eyebrow">Advanced binary contract math</p>
-            <h1>Price cleanly. Size rationally. Pass on fake edge.</h1>
+            <h1>Avoid fake edge.</h1>
             <p className="hero-copy">
               Support for YES, NO, target entry, reverse pricing, slippage, and sizing.
             </p>
@@ -622,7 +622,7 @@ export default function HomePage() {
               <p className="eyebrow">PolyCalc</p>
               <h2>Open-source binary market calculator by Lurk.</h2>
               <p className="section-copy footer-copy">
-                Clean contract math, shareable state, venue-aware fee presets, and pass discipline — in a shell that no longer looks like a random admin panel wandered onto the page.
+                Clean contract math, shareable state, venue-aware fee presets, and pass discipline.
               </p>
             </div>
             <div className="footer-links">
@@ -647,5 +647,3 @@ export default function HomePage() {
     </main>
   );
 }
-
-/* Suggested commit message: rework PolyCalc shell into a premium desktop/mobile UI with cleaner header, grouped controls, upgraded footer, and tighter visual rhythm */

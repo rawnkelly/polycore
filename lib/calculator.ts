@@ -769,4 +769,3 @@ export function formatSignedCurrencyFromCents(value: number, precision: number):
   return `${sign}$${(Math.abs(value) / 100).toFixed(precision)}`;
 }
 
-/* Suggested commit message: add advanced pricing, sizing, reverse-calc, slippage, and shareable-state features to PolyCalc */

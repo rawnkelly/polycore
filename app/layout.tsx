@@ -21,4 +21,3 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   );
 }
 
-/* Suggested commit message: simplify app layout for PolyCalc standalone deployment */
