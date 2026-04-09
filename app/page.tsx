@@ -417,8 +417,8 @@ export default function HomePage() {
             <div>
               <p className="eyebrow">Open-source utility by Lurk</p>
               <div className="brand-line">
-                <strong>PolyCalc</strong>
-                <span>Binary market pricing terminal</span>
+                <strong>PolyCalc (v0.3)</strong>
+                <span>Binary market pricing tool</span>
               </div>
             </div>
           </div>

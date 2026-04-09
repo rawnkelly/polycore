@@ -1,10 +1,8 @@
-# PolyCalc
+# PolyCalc (v0.3)
 
 Open-source binary market calculator by Lurk.
 
 ## What is in this version
-
-This build is no longer just a yes/no EV toy.
 
 It now includes:
 - target entry price calculator
