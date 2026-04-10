@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 function Shell({ title, subtitle, children }: { title: string; subtitle: string; children: React.ReactNode }) {
-  const nav = [{ href: '/', label: 'Overview' }, { href: '/calculator', label: 'Calculator' }, { href: '/watchlist', label: 'Watchlist' }, { href: '/monitor', label: 'Monitor' }, { href: '/rules', label: 'Rules' }, { href: 'https://github.com/Lurk-AI-INC/polycore', label: 'GitHub' }];
+  const nav = [{ href: '/calculator', label: 'Calculator' }, { href: '/watchlist', label: 'Watchlist' }, { href: '/monitor', label: 'Monitor' }, { href: '/rules', label: 'Rules' }, { href: 'https://github.com/Lurk-AI-INC/polycore', label: 'GitHub' }];
   return (
     <div className="page-frame">
       <div className="topbar panel-surface">
