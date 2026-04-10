@@ -48,8 +48,7 @@ export default function HomePage() {
             <p className="eyebrow">Overview</p>
             <h1>Free market tools.</h1>
             <p className="hero-copy">
-              PolyCore merges the advanced math with a real watchlist and a live monitor surface,
-              plus a CLI if that&apos;s your thing.
+              PC merges advanced math, a watchlist, a live monitor surface, plus a CLI if that&apos;s your thing.
             </p>
             <div className="hero-actions">
               <Link className="primary-button" href="/calculator">Open calculator</Link>
