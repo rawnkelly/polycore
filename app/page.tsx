@@ -31,8 +31,9 @@ function Shell({ title, subtitle, children }: { title: string; subtitle: string;
 
 const modules = [
   { href: '/calculator', eyebrow: 'Analyze', title: 'Calculator', copy: 'Quote-aware YES / NO pricing with target entry, reverse pricing, fee presets, slippage, and sizing.' },
-  { href: '/watchlist', eyebrow: 'Track', title: 'Watchlist', copy: 'Saved watchlists, live Kalshi public data,  filter/sort, and one-click launch into the calculator.' },
-  { href: '/monitor', eyebrow: 'Operate', title: 'Monitor', copy: 'A denser live board with selection detail, pulse metrics, event logs, and terminal-style posture.' },
+  { href: '/watchlist', eyebrow: 'Track', title: 'Watchlist', copy: 'Saved watchlists, live Kalshi public data, filter/sort, and one-click launch into the calculator.' },
+  { href: '/monitor', eyebrow: 'Operate', title: 'Monitor', copy: 'A dlive board with selection detail, pulse metrics, and event logs.' },
+  { href: '/rules', eyebrow: 'Regulate', title: 'Rules', copy: 'A denser live board with selection detail, pulse metrics, event logs, and terminal-style posture.' },
 ];
 
 export default function HomePage() {
