@@ -31,7 +31,7 @@ export default function HomePage() {
             <div>
               <p className="eyebrow">Open-source binary market toolkit by Lurk</p>
               <div className="brand-line">
-                <strong>PolyCore</strong>
+                <strong>PolyCore (v0.1)</strong>
                 <span>Analyze. Track. Monitor.</span>
               </div>
             </div>
