@@ -57,7 +57,7 @@ export default function HomePage() {
             <h1>Open-source tooling for binary markets.</h1>
             <p className="hero-copy">Price contracts, track watchlists, monitor live markets, and run local rules from the browser or terminal.</p>
             <div className="hero-actions">
-              <Link className="secondary-button" href="/calculator">Open calculator</Link>
+              <Link className="primary-button" href="/calculator">Open calculator</Link>
               <Link className="secondary-button" href="/watchlist">Open watchlist</Link>
               <Link className="secondary-button" href="/monitor">Open monitor</Link>
               <Link className="secondary-button" href="/rules">Open rules</Link>
