@@ -32,7 +32,7 @@ export default function HomePage() {
   return (
     <main className="page-shell">
       <PolycoreShell
-        title="PolyCore (v0.5)"
+        title="PolyCore (v0.6)"
         subtitle="Open-source tooling for binary markets."
       >
         <header className="hero panel-surface">
