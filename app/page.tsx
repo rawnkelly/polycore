@@ -1,61 +1,47 @@
 import Link from 'next/link';
-
-function Shell({ title, subtitle, children }: { title: string; subtitle: string; children: React.ReactNode }) {
-  const nav = [
-    { href: '/calculator', label: 'Calculator' },
-    { href: '/watchlist', label: 'Watchlist' },
-    { href: '/monitor', label: 'Monitor' },
-    { href: '/rules', label: 'Rules' },
-    { href: 'https://github.com/Lurk-AI-INC/polycore', label: 'GitHub' },
-  ];
-
-  return (
-    <div className="page-frame">
-      <div className="topbar panel-surface">
-        <div className="brand-lockup">
-          <div className="brand-mark">PC</div>
-          <div>
-            <p className="eyebrow">Open-source market toolkit by Lurk</p>
-            <div className="brand-line"><strong>{title}</strong><span>{subtitle}</span></div>
-          </div>
-        </div>
-        <div className="topbar-actions">
-          {nav.map((link) => <Link key={link.href} className="secondary-button" href={link.href}>{link.label}</Link>)}
-        </div>
-      </div>
-      {children}
-      <footer className="footer panel-surface">
-        <div className="footer-main">
-          <div>
-            <p className="eyebrow">PolyCore</p>
-            <h2>Fast tooling for market workflows.</h2>
-            <p className="section-copy footer-copy">Calculator, watchlists, monitor, rules, and CLI.</p>
-          </div>
-          <div className="footer-links">
-            {nav.map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
+import { PolycoreShell } from '@/components/polycore-shell';
 
 const modules = [
-  { href: '/calculator', eyebrow: 'Analyze', title: 'Calculator', copy: 'YES / NO pricing with target entry, reverse pricing, fee presets, slippage, and sizing.' },
-  { href: '/watchlist', eyebrow: 'Track', title: 'Watchlist', copy: 'Saved local watchlists, live Kalshi data, filter/sort, and one-click launch into the calculator.' },
-  { href: '/monitor', eyebrow: 'Monitor', title: 'Monitor', copy: 'A live board for tracked markets with selection detail, pulse metrics, and event logs.' },
-  { href: '/rules', eyebrow: 'Automate', title: 'Rules', copy: 'Saved alert rules that watch price, spread, status, time-to-close, and EV conditions.' },
+  {
+    href: '/calculator',
+    eyebrow: 'Analyze',
+    title: 'Calculator',
+    copy: 'YES / NO pricing with target entry, reverse pricing, fee presets, slippage, and sizing.',
+  },
+  {
+    href: '/watchlist',
+    eyebrow: 'Track',
+    title: 'Watchlist',
+    copy: 'Saved local watchlists, better JSON import/export, live rows, and calculator handoff.',
+  },
+  {
+    href: '/monitor',
+    eyebrow: 'Monitor',
+    title: 'Monitor',
+    copy: 'A live board for tracked markets with sorting, pause/resume, selection detail, and tape-style logs.',
+  },
+  {
+    href: '/rules',
+    eyebrow: 'Automate',
+    title: 'Rules',
+    copy: 'Saved alert rules with import/export, positive-EV evaluation, countdown, spread, and status triggers.',
+  },
 ];
 
 export default function HomePage() {
   return (
     <main className="page-shell">
-      <Shell title="PolyCore (v0.4)" subtitle="Open-source tooling for binary markets.">
+      <PolycoreShell
+        title="PolyCore (v0.5)"
+        subtitle="Open-source tooling for binary markets."
+      >
         <header className="hero panel-surface">
           <div className="hero-copy-wrap">
             <p className="eyebrow">Overview</p>
             <h1>Open-source market tools.</h1>
-            <p className="hero-copy">Price contracts, track watchlists, monitor markets, and run rules from the browser or CLI.</p>
+            <p className="hero-copy">
+              Price contracts, track watchlists, monitor markets, and run rules from the browser or CLI.
+            </p>
             <div className="hero-actions">
               <Link className="primary-button" href="/calculator">Open calculator</Link>
               <Link className="secondary-button" href="/watchlist">Open watchlist</Link>
@@ -65,9 +51,9 @@ export default function HomePage() {
           </div>
           <div className="hero-rail">
             <div className="info-chip"><span>Calculator</span><strong>Edge, EV, Kelly, target entry, and reverse pricing.</strong></div>
-            <div className="info-chip"><span>Watchlist</span><strong>Saved local watchlists, import/export, filters, and calculator handoff.</strong></div>
-            <div className="info-chip"><span>Monitor</span><strong>Live board for the markets you are tracking right now.</strong></div>
-            <div className="info-chip"><span>Rules</span><strong>Saved conditions for entry, spread, status, countdown, and EV.</strong></div>
+            <div className="info-chip"><span>Watchlist</span><strong>Saved lists, import/export, selected market detail, and fast calculator launch.</strong></div>
+            <div className="info-chip"><span>Monitor</span><strong>Sorting, pause/resume, sparkline history, and event logs.</strong></div>
+            <div className="info-chip"><span>Rules</span><strong>Rule builder, rule import/export, and fee-aware EV triggers.</strong></div>
           </div>
         </header>
 
@@ -75,14 +61,17 @@ export default function HomePage() {
           {modules.map((module) => (
             <section key={module.href} className="result-card panel-surface">
               <div className="result-card-header">
-                <div><p className="eyebrow">{module.eyebrow}</p><h2>{module.title}</h2></div>
+                <div>
+                  <p className="eyebrow">{module.eyebrow}</p>
+                  <h2>{module.title}</h2>
+                </div>
                 <Link className="badge badge-best" href={module.href}>Open</Link>
               </div>
               <p className="section-copy">{module.copy}</p>
             </section>
           ))}
         </section>
-      </Shell>
+      </PolycoreShell>
     </main>
   );
 }
